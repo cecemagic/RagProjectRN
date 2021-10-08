@@ -10,26 +10,35 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import DT from './darkTheme'
 import myDarkTheme from './darkTheme'
+import HomeScreen from './src/screens/HomeScreen'
 
-function HomeScreen() {
-  return (
-    <SafeAreaView>
-      <View>
-        <Text style={{ color: 'white' }}>Home Screen</Text>
-      </View>
-    </SafeAreaView>
-  )
-}
+// function HomeScreen() {
+//   return (
+//     <SafeAreaView>
+//       <View>
+//         <Text style={{ color: 'white' }}>Home Screen</Text>
+//       </View>
+//     </SafeAreaView>
+//   )
+// }
 
 const HomeStack = createStackNavigator()
 
-function HomeScrenStack({ navigation }) {
+function HomeScreenStack({ navigation }) {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name='Home' component={HomeScreen}></HomeStack.Screen>
+    <HomeStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <HomeStack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+      ></HomeStack.Screen>
     </HomeStack.Navigator>
-  )
+  );
 }
+
 
 function App() {
   const scheme = useColorScheme()
@@ -37,7 +46,7 @@ function App() {
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? MyDarkTheme : DefaultTheme}>
-      <HomeScrenStack />
+      <HomeScreenStack />
     </NavigationContainer>
   )
 }
