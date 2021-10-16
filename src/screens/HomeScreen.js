@@ -14,23 +14,30 @@ import titleFont from "../../assets/Marshland_Beauty.otf";
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
+
       <View style={styles.parentCard}>
+
         <ImageBackground
           source={homeScreenImage}
           resizeMode="cover"
           style={styles.image}
         >
+
           <View>
             <Text style={styles.titleText}>Rent A Guy</Text>
           </View>
+          
           <View style={styles.cardOptions}>
             <Text style={styles.cardText}>Rent A Guy</Text>
           </View>
+
           <View style={styles.cardOptions}>
             <Text style={styles.cardText}>Be a Date</Text>
           </View>
+
         </ImageBackground>
       </View>
+
     </SafeAreaView>
   );
 }
