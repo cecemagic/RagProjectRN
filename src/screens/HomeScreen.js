@@ -9,7 +9,8 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import homeScreenImage from "../../assets/homeScreen.jpeg";
-import titleFont from "../../assets/Marshland_Beauty.otf";
+import RentAGuyScreen  from "./RentAGuyScreen";
+
 
 export default function HomeScreen() {
   return (

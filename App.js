@@ -11,6 +11,8 @@ import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import DT from './darkTheme'
 import myDarkTheme from './darkTheme'
 import RentAGuyScreen from './src/screens/RentAGuyScreen'
+import AnimatableTest from './src/screens/AnimatableTest'
+import ProfileSetUpScreen from './src/screens/ProfileSetUpScreen'
 
 
 const HomeStack = createStackNavigator()
@@ -23,8 +25,8 @@ function HomeScreenStack({ navigation }) {
       }}
     >
       <HomeStack.Screen
-        name="RentAGuyScreen"
-        component={RentAGuyScreen}
+        name="ProfileSetUpScreen"
+        component={ProfileSetUpScreen}
       ></HomeStack.Screen>
     </HomeStack.Navigator>
   );
